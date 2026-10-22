@@ -197,6 +197,7 @@ window.MORPH = {
      { type: "video", category: "Personajes", title: "Alexia", desc: "Alexia modelando", url: "assets/alexia modelando 2.mp4", poster: "assets/alexiaacostada.jpg" },
      { type: "video", category: "Escenas inéditas", title: "Estilo cómic", desc: "Originalmente Morph Corporation era estilo cómic, pero con el tiempo decidí usar inteligencia artificial para cambiar al estilo ultrarealista.", url: "assets/shami comic.mp4", poster: "assets/shamcomic.jpg" },
      { type: "video", category: "Escenas inéditas", title: "Prototipo-06", desc: "Walter transformado.", url: "assets/tigre blanco.mp4", poster: "assets/tigre blanco.png" },
+    { type: "video", category: "Escenas inéditas", title: "Trailer de Dimitri", desc: "Escena donde Dimitri se ve trabajando en una criatura extraña.", url: "https://youtu.be/4oInE15OZp0?si=_eK5eVNPgtpFbSNL", poster: "assets/Teaser trailer Morph.jpg" },
     { type: "video", category: "Escenas inéditas", title: "", desc: "Shami fue clasificada como un prototipo asesino, y es de las más difíciles de controlar.", url: "assets/sham ataca.mp4", poster: "assets/sham ataca 2.png" },
      { type: "image", category: "Fotos inéditas", title: "Torneo final", desc: "Shami vs Lagarto", src: "assets/sham golpea.png" },
      { type: "image", category: "Fotos inéditas", title: "prototipo-0", desc: "Eliza en la nieve luego de salir al exterior.", src: "assets/eliza en nieve.jpg" },
