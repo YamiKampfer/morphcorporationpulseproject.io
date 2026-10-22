@@ -34,7 +34,7 @@ window.MORPH = {
     ]
   },
 
-  TRAILER: { url: "assets/TRAILER OFICIAL DE MORPH COMPLETO 2k.mp4", poster: "assets/TRAILER OFICIAL DE MORPH.jpg" },
+  TRAILER: { url: "https://youtu.be/HF3ruzKmLSQ?si=KvSFdc1H81Vaf5K2", poster: "assets/TRAILER OFICIAL DE MORPH.jpg" },
 
   BRACELETS: [
     { name: "Verde", hex: "#2E9E6B", meaning: "Todo en orden" },
