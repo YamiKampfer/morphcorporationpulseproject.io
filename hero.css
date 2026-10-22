@@ -1,0 +1,83 @@
+/* Portada animada: acero oscuro con ADN en movimiento lento */
+.hero-live {
+  background: radial-gradient(120% 90% at 72% 40%, #0f2234 0%, #07111b 45%, #03070c 100%);
+  border-bottom: 1px solid #0f1a22;
+  color: #e6ecf1;
+}
+.hero-live .hero-hall { background: none; -webkit-mask-image: none; mask-image: none; }
+#hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero-live::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(160, 200, 230, 0.035) 0 1px, transparent 1px 3px);
+}
+.hero-live::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(90% 80% at 50% 45%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+.hero-live .hero-in { z-index: 2; }
+
+/* marco y textos tipo interfaz */
+.hud-frame {
+  --c: rgba(140, 180, 215, 0.45);
+  position: absolute; inset: 16px; z-index: 2; pointer-events: none;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / 28px 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) top left / 1px 28px no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / 28px 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) top right / 1px 28px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / 28px 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom left / 1px 28px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / 28px 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / 1px 28px no-repeat;
+}
+.hud {
+  position: absolute; z-index: 2; margin: 0; pointer-events: none;
+  font-family: var(--head); font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+  line-height: 1.9; color: rgba(150, 185, 215, 0.7);
+}
+.hud-tl { top: 34px; left: 38px; }
+.hud-tr { top: 34px; right: 38px; text-align: right; }
+.hud-bl { bottom: 30px; left: 38px; }
+
+/* textos */
+.hero-live .hero-title {
+  background: linear-gradient(100deg, #8fa3b4 0%, #f1f6fa 28%, #7f93a5 50%, #e9f0f5 72%, #8fa3b4 100%);
+  background-size: 220% 100%; background-position: 100% 0;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-live .hero-sub { position: relative; padding-top: 22px; color: #86c3e0; }
+.hero-live .hero-sub::before {
+  content: ""; position: absolute; top: 0; left: 0; width: min(320px, 60%); height: 1px;
+  background: linear-gradient(90deg, #8fdde4, transparent); box-shadow: 0 0 12px #5fb6d6;
+}
+.hero-live .hero-tag { color: #aebdca; }
+.hero-live .band { background: rgba(255, 255, 255, 0.05); border-color: rgba(185, 197, 207, 0.28); color: #c4d0da; }
+.hero-live .cta-watch { background: #e8edf1; color: #101820; }
+.hero-live .cta-watch .tri { border-left-color: #101820; }
+.hero-live .cta-watch:hover { background: #bfeef2; }
+.hero-live .cta-meet { color: #e8edf1; }
+.hero-live .cta-meet::before, .hero-live .cta-meet::after { border-color: #e8edf1; }
+.hero-live .cta-meet:hover::before, .hero-live .cta-meet:hover::after { border-color: #8fdde4; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-live .hero-title { animation: title-sweep 9s ease-in-out infinite alternate; }
+  @keyframes title-sweep { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+}
+@media (max-width: 700px) {
+  .hud-tl, .hud-tr { display: none; }
+  .hud-bl { left: 28px; bottom: 26px; font-size: 0.6rem; letter-spacing: 0.2em; }
+  .hero-live .hero-in { padding-bottom: 96px; }
+}
+
+/* 1. Más aire arriba: el título arranca por debajo de los textos de las esquinas */
+.hero-live .hero-in { padding-top: 150px; }
+
+/* 2. Letra de las esquinas más chica y más compacta */
+.hud { font-size: 0.6rem; letter-spacing: 0.22em; line-height: 1.7; }
+
+/* 3. En pantallas bajas o angostas, ocultar los textos de arriba para que no molesten */
+@media (max-height: 760px), (max-width: 1100px) {
+  .hud-tl, .hud-tr { display: none; }
+}
+
+
