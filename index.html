@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Corporación Morph: Project Pulse</title>
+  <meta name="description" content="Sitio oficial de la serie de Shami Rochefort: personajes, capítulos, tráiler y el mundo de Morph." />
+  <meta name="author" content="Shami Rochefort" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Oxanium:wght@500;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e8edf1'/%3E%3Cpath d='M16 3 27 9.5v13L16 29 5 22.5v-13z' fill='none' stroke='%23101820' stroke-width='2'/%3E%3Cpath d='M8 17h4l2-5 4 9 2-4h4' fill='none' stroke='%230a5566' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <a href="#inicio" class="brand" aria-label="Corporación Morph, inicio">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <path d="M16 2 28 9v14l-12 7L4 23V9z" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M7 17h5l2-5 4 9 2-4h5" fill="none" stroke="#0A5566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>MORPH</span>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#serie">La serie</a>
+        <a href="#trailer">Tráiler</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#mundo">El mundo</a>
+        <a href="#capitulos">Capítulos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#extras">Extras</a>
+        <a href="#musica">Música</a>
+        <a href="#zona18" class="nav-18" id="nav-18" hidden>Zona +18</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+      <section id="inicio" class="hero hero-live">
+      <div class="hero-hall" id="hero-hall" aria-hidden="true"><canvas id="hero-canvas"></canvas></div>
+      <div class="hud-frame" aria-hidden="true"></div>
+      <p class="hud hud-tl" aria-hidden="true">Biotecnología<br />Investigación<br />Desarrollo<br />Prototipos</p>
+      <p class="hud hud-tr" aria-hidden="true">La adaptación<br />es solo<br />el comienzo</p>
+      <p class="hud hud-bl" aria-hidden="true">Evolución / Control / Un futuro mejor</p>
+      <div class="wrap hero-in">
+        <h1 class="hero-title" id="hero-title"></h1>
+        <p class="hero-sub" id="hero-sub"></p>
+        <p class="hero-tag" id="hero-tag"></p>
+        <div class="bands" id="bands" aria-hidden="true"></div>
+        <div class="hero-cta">
+          <a href="#trailer" class="cta-watch"><span class="tri" aria-hidden="true"></span>Ver tráiler</a>
+          <a href="#personajes" class="cta-meet">Conocer a los personajes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Aviso">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>BIENVENIDO AL SISTEMA MORPH</span><i>◆</i>
+          <span>TU INFORMACIÓN ESTÁ SIENDO PROCESADA</span><i>◆</i>
+          <span>NO TODAS LAS TRANSFORMACIONES SON REVERSIBLES</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="serie" class="sec">
+      <div class="wrap serie-grid">
+        <div>
+          <p class="eyebrow">La serie</p>
+          <h2>Un proyecto que no debía existir</h2>
+          <div id="premise"></div>
+        </div>
+        <div class="panel">
+          <dl class="facts" id="facts"></dl>
+          <h3 class="mini">Pulseras</h3>
+          <ul class="legend" id="legend"></ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="trailer" class="sec sec-alt">
+      <div class="wrap">
+        <h2>Tráiler de la Temporada 1</h2>
+        <div class="stage" id="trailer-stage"></div>
+      </div>
+    </section>
+
+    <section id="personajes" class="sec">
+      <div class="wrap">
+        <p class="eyebrow">Expedientes</p>
+        <h2>Personajes</h2>
+        <div id="chars"></div>
+      </div>
+    </section>
+
+    <section id="mundo" class="sec sec-alt">
+      <div class="wrap">
+        <h2>El mundo de Morph</h2>
+        <p class="lead">La arena, las apuestas y la élite: lo que mueve a la Corporación desde las sombras.</p>
+        <div class="world" id="world"></div>
+      </div>
+    </section>
+
+    <section id="capitulos" class="sec">
+      <div class="wrap">
+        <h2>Capítulos</h2>
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <div id="eps"></div>
+      </div>
+    </section>
+
+    <section id="galeria" class="sec sec-alt">
+      <div class="wrap">
+        <h2>Galería</h2>
+        <div class="gal" id="gal"></div>
+      </div>
+    </section>
+
+    
+        <section id="extras" class="sec">
+      <div class="wrap">
+        <p class="eyebrow">Fuera de pantalla</p>
+        <h2>Contenido extra</h2>
+        <p class="lead">Videos de los personajes, escenas y fotos extras.</p>
+        <div class="tabs" id="extras-tabs" role="tablist"></div>
+        <div class="eps" id="extras-grid"></div>
+      </div>
+    </section>
+
+
+   
+       <section id="musica" class="sec sec-alt">
+      <div class="wrap">
+        <p class="eyebrow">Banda sonora</p>
+        <h2>Música de la serie</h2>
+        <p class="lead">Las canciones de Corporación Morph, con subtítulos y el significado de cada una.</p>
+        <div class="eps" id="music-grid"></div>
+      </div>
+    </section>
+
+
+
+    <section id="zona18" class="sec dark" hidden>
+      <div class="wrap">
+        <p class="eyebrow">Acceso restringido</p>
+        <h2 id="adult-title">Zona +18</h2>
+        <p class="lead" id="adult-text"></p>
+        <button type="button" class="unlock" id="adult-open">Entrar a la zona restringida</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <p id="foot-text"></p>
+      <p class="soc" id="soc"></p>
+    </div>
+  </footer>
+
+  <aside class="aurora" aria-label="Aurora, asistente de la Corporación">
+    <p class="aurora-bubble" id="aurora-bubble"></p>
+    <button type="button" class="aurora-face" id="aurora-face" aria-label="Mostrar u ocultar mensaje de Aurora"></button>
+    <span class="aurora-name">AURORA</span>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-card" id="modal-card">
+      <button type="button" class="modal-x" id="modal-x" aria-label="Cerrar">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+  <script src="hero.js"></script>
+</body>
+</html>
